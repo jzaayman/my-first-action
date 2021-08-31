@@ -38,10 +38,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
 const github_1 = __nccwpck_require__(438);
 function run() {
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         const message = core.getInput('message');
         core.warning(github_1.context.repo.owner);
-        core.warning(`${github_1.context.payload}`);
+        core.warning(`${(_a = github_1.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.number}`);
+        core.warning(message);
     });
 }
 run();
