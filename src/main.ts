@@ -7,6 +7,7 @@ async function run(): Promise<void> {
   core.warning(context.repo.repo)
   core.warning(`${context.payload.pull_request?.number}`)
   core.warning(message)
+  const password = "Password"
 }
 
 run()
